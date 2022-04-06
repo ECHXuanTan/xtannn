@@ -36,9 +36,9 @@
                                 <i class="header_navbar-icon far fa-question-circle"></i>
                                 Trợ giúp</a>
                         </li>
-                        <li class="header_navbar-item header_navbar-item-bold header_navbar-item-separate">Đăng ký</li>
-                        <li class="header_navbar-item header_navbar-item-bold">Đăng nhập</li>
-                        <!-- <li class="header_navbar-item header_navbar-user">
+                        <!-- <li class="header_navbar-item header_navbar-item-bold header_navbar-item-separate">Đăng ký</li>
+                        <li class="header_navbar-item header_navbar-item-bold">Đăng nhập</li> -->
+                        <li class="header_navbar-item header_navbar-user">
                             <img src="https://i.pinimg.com/474x/0c/3b/3a/0c3b3adb1a7530892e55ef36d3be6cb8.jpg" class="header_navbar-user-img">
                             <span class="header_navbar-user-name">Xuân Tân</span>
 
@@ -55,64 +55,833 @@
                                     <a href="">Đăng xuất</a>
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
                     </ul>
                 </nav>
-                
-                
+
+                <div class="header_container">
                     <div class="header_logo">
                         <a href="/" class="header_logo-link">
                             <img class="header_logo-img" src="https://www.mwc.com.vn/Resources/Config/2020/06/28/logo.jpg" alt=""> 
                         </a>
-                        
                     </div> 
-                    
-                    <input type="checkbox" name="" id="click">
-                    <label for="click" class="header_search-btn">
-                        <i class="header_search-btn-icon fas fa-search"></i>
-                    </label>
-               
-
-                <!-- Modal search -->
-                <div class="modal-bg">
-                    <div class="modal-content">
-                        <form action="">
-                            <div class="header_search-bar">
-                                <div class="header_search-input-wraper">
-                                    <input type="text" class="header_search-input" placeholder="Tìm kiếm sản phẩm, thương hiệu bạn mong muốn">
-                                   <!-- Search history -->
-                                     <div class="header_search-history">
-                                        <h3 class="header_search-history-heading">Lịch sử tìm kiếm</h3>
-                                        <ul class="header_search-history-list">
-                                            <li class="header_search-history-item">
-                                                <a href="">Adidas</a>
-                                            </li>
-        
-                                            <li class="header_search-history-item">
-                                                <a href="">Giày da nam</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    <div class="header_select">
+                        <ul class="header_select_list">
+                            <li class="header_select-dropdown">
+                                <a class="header_select-dropbtn">Di chuyển</a>
+                                <i class="header_select-icon fas fa-angle-down"></i>
+                                <div class="header_select-list-item">
+                                 <a class="header_select-item" href="#">Vé máy bay</a>
+                                 <a class="header_select-item" href="#">Cho thuê xe</a>
+                                 <a class="header_select-item" href="#">Đưa đón sân bay</a>
                                 </div>
-                            </div>
-                            <label for="click" class="header_search-close">+</label>
+                            </li>
 
-                            <!-- <button class="header_search-btn">
-                                <i class="header_search-btn-icon fas fa-search"></i>
-                            </button> -->
-                        </form>
-                    </div>
+                            <li class="header_select-dropdown">
+                                <a class="header_select-dropbtn">Chổ ở</a>
+                                <i class="header_select-icon fas fa-angle-down"></i>
+                                <div class="header_select-list-item">
+                                 <a class="header_select-item" href="#">Khách sạn</a>
+                                 <a class="header_select-item" href="#">Biệt thự</a>
+                                 <a class="header_select-item" href="#">Combo tiết kiệm</a>
+                                </div>
+                            </li>
+
+                            <li class="header_select-dropdown">
+                                <a class="header_select-dropbtn">Hoạt động và giải trí</a>
+                                <i class="header_select-icon fas fa-angle-down"></i>
+                                <div class="header_select-list-item">
+                                 <a class="header_select-item" href="#">HTML</a>
+                                 <a class="header_select-item" href="#">cSS</a>
+                                 <a class="header_select-item" href="#">Javascript</a>
+                                </div>
+                            </li>
+                            <li class="header_select-dropdown">
+                                <button id="open" class="header_search-btn" onClick="Open()">
+                                    <i class="header_search-btn-icon fas fa-search"></i>
+                                </button> 
+                            </li>
+                            
+                        </ul>        
+                    </div>    
                 </div>
+                
+                        <!-- Modal search -->
+                        <div class="modal_bg" id="modal">
+                            <div class="modal-content">
+                                <form action="">
+                                    <div class="header_search-bar">
+                                        <div class="header_search-input-wraper">
+                                            <input type="text" class="header_search-input" placeholder="Tìm kiếm sản phẩm, thương hiệu bạn mong muốn">
+                                           <!-- Search history -->
+                                             <div class="header_search-history">
+                                                <h3 class="header_search-history-heading">Lịch sử tìm kiếm</h3>
+                                                <ul class="header_search-history-list">
+                                                    <li class="header_search-history-item">
+                                                        <a href="">Adidas</a>
+                                                    </li>
+                
+                                                    <li class="header_search-history-item">
+                                                        <a href="">Giày da nam</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    
+
+                                    <label for="click" class="header_search-close">+</label>
+        
+                                    <button class="header_search-btn" id="close">
+                                        <i class="header_search-btn-icon fas fa-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
                 
         </header> 
 
+        <!-- Container -->
         <div class="container">
-         
+
+            <!-- Home section -->
+            <section class="container_home" id="home">
+                <div class="home_content">
+                    <h3>những chuyến du lịch là sự hoàn hảo</h3>
+                    <p>khám phá những địa điểm mới kèm dịch vụ tuyệt hảo cùng chúng tôi</p>
+                    <a href="#" class="home_btn">Tìm hiểu thêm</a>
+                </div>
+
+                <div class="home_controls">
+                    <span class="vid-btn active" data-src="/Img/vid-1.mp4"></span>
+                    <span class="vid-btn" data-src="/Img/vid-2.mp4"></span>
+                    <span class="vid-btn" data-src="/Img/vid-3.mp4"></span>
+                    <span class="vid-btn" data-src="/Img/vid-4.mp4"></span>
+                    <span class="vid-btn" data-src="/Img/vid-5.mp4"></span>
+                </div>
+            
+                <div class="home_video">
+                    <video src="/Img/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+                </div>
+            </section>
+            
+            <!-- Icon section -->
+            <section class="container_icon">
+                <div class="icon-icons">
+                    <img src="/Img/icon-1.png" alt="">
+                    <div class="icon-info">
+                        <h3>Hỗ trợ khách hàng 24/7</h3>
+                        <span>Chat là có, gọi là nghe, không quản đêm hôm, ngày nghỉ và ngày lễ.</span>
+                    </div>
+                </div>
+
+                <div class="icon-icons">
+                    <img src="/Img/icon-2.png" alt="">
+                    <div class="icon-info">
+                        <h3>Giá tốt sát ngày</h3>
+                        <span>Cam kết giá tốt nhất khi đặt gần ngày cho chuyến đi của bạn.</span>
+                    </div>
+                </div>
+
+                <div class="icon-icons">
+                    <img src="/Img/icon-3.png" alt="">
+                    <div class="icon-info">
+                        <h3>Hơn 8000+ khách sạn dọc Việt Nam</h3>
+                        <span>Hàng nghìn khách sạn, đặc biệt là 4 sao và 5 sao, cho phép bạn thoải mái lựa chọn, giá cạnh tranh, phong phú.</span>
+                    </div>
+                </div>
+
+                <div class="icon-icons">
+                    <img src="/Img/icon-4.png" alt="">
+                    <div class="icon-info">
+                        <h3>Thanh toán dễ dàng, đa dạng</h3>
+                        <span>Bao gồm thêm chuyển khoản ngân hàng và tiền mặt tại cửa hàng.</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Product -->
+            <section class="container_product">
+                <h1 class="product-heading"> Khách sạn giá tốt chỉ có trên MWC </h1>
+
+                <div class="product-filter">
+                    <div class="product-filter-btn active" data-filter="all">Tất cả</div>
+                    <div class="product-filter-btn" data-filter="arrivals">Khách sạn mới</div>
+                    <div class="product-filter-btn" data-filter="featured">Đang thịnh hành</div>
+                    <div class="product-filter-btn" data-filter="special">Dành riêng cho bạn</div>
+                    <div class="product-filter-btn" data-filter="seller">Giá hấp dẫn</div>
+                </div>
+
+                <div class="product-home">
+                    <div class="grid_row">
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-1.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Eastin Grand Nha Trang</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Nha Trang</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.542.000đ</span>
+                                    <span class="product-item-price-now">1.387.000đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-10%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-2.jpg" alt="">
+                                <h4 class="product-item-name">InterContinental Phú Quốc Long Beach Resort</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Phú Quốc</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">2.648.104đ</span>
+                                    <span class="product-item-price-now">2.571.495đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-3%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-3.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Sofitel Plaza Sài Gòn</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Hồ Chí Minh</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">4.189.091đ</span>
+                                    <span class="product-item-price-now">1.406.068đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-67%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-4.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Mường Thanh Grand Sài Gòn Centre</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Hồ Chí Minh</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.152.000đ</span>
+                                    <span class="product-item-price-now">851.901đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-27%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-5.jpg" alt="">
+                                <h4 class="product-item-name">Khách Sạn Ibis Styles Vũng Tàu</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Vũng Tàu</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">3.063.272đ</span>
+                                    <span class="product-item-price-now">1.301.960đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-58%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-6.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Colline</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Đà Lạt</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">4.806.982đ</span>
+                                    <span class="product-item-price-now">1.694.759đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-65%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-7.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Golf Valley</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Đà Lạt</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.361.455đ</span>
+                                    <span class="product-item-price-now">984.509đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-28%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-8.jpg" alt="">
+                                <h4 class="product-item-name">Khách Sạn Imperial Vũng Tàu</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Vũng Tàu</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">2.819.999đ</span>
+                                    <span class="product-item-price-now">2.233.188đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-21%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-9.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Eastin Grand Nha Trang</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Nha Trang</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.780.800đ</span>
+                                    <span class="product-item-price-now">1.590.255đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-11%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-10.jpg" alt="">
+                                <h4 class="product-item-name">Khách Sạn Marissa Hải Tiến</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Huyện Hoằng Hóa</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">680.728đ</span>
+                                    <span class="product-item-price-now">652.819đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-5%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-11.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Senna Huế</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Huế</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.209.600đ</span>
+                                    <span class="product-item-price-now">1.160.007đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-5%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-12.jpg" alt="">
+                                <h4 class="product-item-name">Khách Sạn Caravelle Sài Gòn</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Hồ Chí Minh</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">3.141.818đ</span>
+                                    <span class="product-item-price-now">1.908.236đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-40%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-13.jpg" alt="">
+                                <h4 class="product-item-name">Furama Resort Danang</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Đà Nẵng</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">3.203.036đ</span>
+                                    <span class="product-item-price-now">2.224.508đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-31%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-14.jpg" alt="">
+                                <h4 class="product-item-name">Khách Sạn Imperial Hà Nội</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Hà Nội</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">1.047.272đ</span>
+                                    <span class="product-item-price-now">592.558đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-44%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-15.jpg" alt="">
+                                <h4 class="product-item-name">Victoria Resort Cần Thơ</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Cần Thơ</span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">3.141.818đ</span>
+                                    <span class="product-item-price-now">1.631.040đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-49%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid_column-4">
+                            <div class="product-item">
+                                <img class="product-item-img" src="/Img/product_img-16.jpg" alt="">
+                                <h4 class="product-item-name">Khách sạn Ninh Kiều Riverside</h4>
+
+                                <div class="product-item-rate">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+
+                                <div class="product-item-location">
+                                    <i class="fa-solid fa-city"></i>
+                                    <span>Thành phố Cần Thơ/span>
+                                </div>
+
+                                <div class="product-item-action">
+                                    <span class="product-item-like">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </span>
+                                    
+                                </div>
+
+                                <div class="product-item-price">
+                                    <span class="product-item-price-old">733.091đ</span>
+                                    <span class="product-item-price-now">703.035đ</span>
+                                </div>
+
+                                <div class="product-item-discount">
+                                    <span>-5%</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </section>
+
         </div>
 
+        <!-- Footer -->
         <footer class="footer">
+            <div class="grid footer_top">
+               <div class="grid_row">
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">Liên lạc với chúng tôi</h3>
+                    <ul class="footer_list">
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fa-solid fa-location-dot"></i> 117-119 Lý Chính Thắng, P. 7, Q. 3, TPHCM</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fa-solid fa-phone"></i> 0589 457 896</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fa-solid fa-envelope"></i>info@mwchotel.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer_list">
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Trung tâm hỗ trợ</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Cách đặt chỗ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">Sản phẩm</h3>
+                    <ul class="footer_list">
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Khách sạn</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Biệt thự</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Căn hộ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">Theo dõi chúng tôi trên</h3>
+                    <ul class="footer_list">
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fab fa-facebook"></i>Facebook</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fab fa-instagram"></i>Instagram</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link"><i class="footer_item-icon fab fa-twitter"></i>Twitter</a>
+                        </li>    
+                    </ul>
+                </div>
+                <div class="grid_column-2-4">
+                    <h3 class="footer_heading">Giới thiệu</h3>
+                    <ul class="footer_list">
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Về chúng tôi</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Chính sách quyền riêng tư</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Điều khoản & Điều kiện</a>
+                        </li>
+                        <li class="footer_item">
+                            <a href="" class="footer_item-link">Tuyển dụng</a>
+                        </li>
+                    </ul>
+                </div>
+               </div>
+            </div>
 
+            <div class="footer_bottom">
+                <div class="grid">
+                    <p class="footer_text">Copyright © 2022 MWC</p>
+                </div>
+            </div>
         </footer>
     </div>
 
